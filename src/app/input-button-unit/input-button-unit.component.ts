@@ -12,7 +12,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputButtonUnitComponent implements OnInit {
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  // this.title = 'Angular CLI Rules!';
   }
-  title = 'Hello World';
+
+  title = 'InputButtonLevel';
+
+  constructor() {
+    console.log('in constructor');
+    this.changeTitle('In the Constructor');
+    console.log(this.title);
+  }
+
+  changeTitle(newTitle: string) {
+    console.log(newTitle);
+    this.title = newTitle;
+  }
+
 }
